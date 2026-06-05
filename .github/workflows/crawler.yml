@@ -32,10 +32,10 @@ on:
     # 📝 Change time: GitHub Actions cron uses UTC time
     #
     # 示例 / Examples:
-    #   "0 0,12 * * *"   → 北京时间 8:00 和 20:00 / Beijing 8am and 8pm
+    #   "13 10,22 * * *" → 北京时间 6:13 和 18:13 / Beijing 6:13am and 6:13pm
     #   "30 0-14 * * *"  → 北京时间 8:30-22:30 每小时运行 / Beijing hourly from 8:30am-10:30pm
     #
-    - cron: "0 0,12 * * *"
+    - cron: "13 10,22 * * *"
 
   workflow_dispatch:
 
