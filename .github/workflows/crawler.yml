@@ -28,14 +28,14 @@ on:
     #
     # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     #
-    # 📝 修改运行时间：只改第一个数字（0-59），表示每小时第几分钟运行
-    # 📝 Change time: Only modify the first number (0-59) = minute of each hour
+    # 📝 修改运行时间：GitHub Actions cron 使用 UTC 时间
+    # 📝 Change time: GitHub Actions cron uses UTC time
     #
     # 示例 / Examples:
-    #   "15 * * * *"     → 每小时第15分钟 / minute 15 every hour
-    #   "30 0-14 * * *"  → 北京时间 8:00-22:00 每小时第30分钟 / Beijing 8am-10pm
+    #   "0 0,12 * * *"   → 北京时间 8:00 和 20:00 / Beijing 8am and 8pm
+    #   "30 0-14 * * *"  → 北京时间 8:30-22:30 每小时运行 / Beijing hourly from 8:30am-10:30pm
     #
-    - cron: "33 * * * *"
+    - cron: "0 0,12 * * *"
 
   workflow_dispatch:
 
